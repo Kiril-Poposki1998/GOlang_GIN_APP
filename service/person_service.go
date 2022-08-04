@@ -1,6 +1,6 @@
 package service
 
-import "github.com/Kiril-Poposki1998/GOA/entity"
+import "github.com/Kiril-Poposki1998/smidGIN/entity"
 
 type Person_Service interface {
 	Save(entity.Person) entity.Person

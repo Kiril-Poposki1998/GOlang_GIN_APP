@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/Kiril-Poposki1998/GOA/controller"
-	"github.com/Kiril-Poposki1998/GOA/service"
+	"github.com/Kiril-Poposki1998/smidGIN/controller"
+	"github.com/Kiril-Poposki1998/smidGIN/service"
 	"github.com/gin-gonic/gin"
 )
 

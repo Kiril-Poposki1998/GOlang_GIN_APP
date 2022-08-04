@@ -1,8 +1,8 @@
 package controller
 
 import (
-	"github.com/Kiril-Poposki1998/GOA/entity"
-	"github.com/Kiril-Poposki1998/GOA/service"
+	"github.com/Kiril-Poposki1998/smidGIN/entity"
+	"github.com/Kiril-Poposki1998/smidGIN/service"
 	"github.com/gin-gonic/gin"
 )
 
