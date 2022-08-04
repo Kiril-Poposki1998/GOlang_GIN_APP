@@ -22,7 +22,7 @@ func New(service service.Person_Service) PersonController {
 }
 
 func (c *controller) FindAll() []entity.Person {
-	return service.New().FindAll()
+	return c.service.FindAll()
 }
 
 func (c *controller) Save(ctx *gin.Context) entity.Person {
