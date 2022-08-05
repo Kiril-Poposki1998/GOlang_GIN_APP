@@ -1,6 +1,8 @@
 package controller
 
 import (
+	"net/http"
+
 	"github.com/Kiril-Poposki1998/smidGIN/entity"
 	"github.com/Kiril-Poposki1998/smidGIN/service"
 	"github.com/gin-gonic/gin"
@@ -9,6 +11,7 @@ import (
 type PersonController interface {
 	FindAll() []entity.Person
 	Save(ctx *gin.Context) entity.Person
+	ShowAll(ctx *gin.Context)
 }
 
 type controller struct {
@@ -30,4 +33,13 @@ func (c *controller) Save(ctx *gin.Context) entity.Person {
 	ctx.BindJSON(&person)
 	c.service.Save(person)
 	return person
+}
+
+func (c *controller) ShowAll(ctx *gin.Context) {
+	persons := c.service.FindAll()
+	data := gin.H{
+		"title":   "Person Page",
+		"persons": persons,
+	}
+	ctx.HTML(http.StatusOK, "index.html", data)
 }

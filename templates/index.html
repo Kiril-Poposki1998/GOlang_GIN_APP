@@ -1,0 +1,7 @@
+{{ template "header.html" }}
+{{ range .persons }}
+<h1>{{ .Name }}</h1>
+<h1>{{ .Surname }}</h1>
+<h1>{{ .EMBG }}</h1>
+{{ end }}
+{{ template "footer.html" }}

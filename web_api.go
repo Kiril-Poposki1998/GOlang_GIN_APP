@@ -14,13 +14,24 @@ var (
 
 func main() {
 	server := gin.New()
+	server.LoadHTMLGlob("templates/*.html")
 	server.Use(gin.Recovery(), middleware.BasicAuth())
-	server.GET("/person", func(ctx *gin.Context) {
-		ctx.JSON(200, personController.FindAll())
-	})
 
-	server.POST("/person", func(ctx *gin.Context) {
-		ctx.JSON(200, personController.Save(ctx))
-	})
+	apiRoutes := server.Group("/api")
+	{
+		apiRoutes.GET("/person", func(ctx *gin.Context) {
+			ctx.JSON(200, personController.FindAll())
+		})
+
+		apiRoutes.POST("/person", func(ctx *gin.Context) {
+			ctx.JSON(200, personController.Save(ctx))
+		})
+	}
+
+	viewRoutes := server.Group("/view")
+	{
+		viewRoutes.GET("/persons", personController.ShowAll)
+	}
+
 	server.Run("localhost:8080")
 }
