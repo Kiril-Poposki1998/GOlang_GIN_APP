@@ -1,7 +1,9 @@
 {{ template "header.html" }}
 {{ range .persons }}
-<h1>{{ .Name }}</h1>
-<h1>{{ .Surname }}</h1>
-<h1>{{ .EMBG }}</h1>
+<ul>
+    <li>{{ .Name }}</li>
+    <li>{{ .Surname }}</li>
+    <li>{{ .EMBG }}</li>
+</ul>
 {{ end }}
 {{ template "footer.html" }}
