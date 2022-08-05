@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/Kiril-Poposki1998/smidGIN/controller"
 	"github.com/Kiril-Poposki1998/smidGIN/middleware"
 	"github.com/Kiril-Poposki1998/smidGIN/service"
@@ -33,5 +35,9 @@ func main() {
 		viewRoutes.GET("/persons", personController.ShowAll)
 	}
 
-	server.Run("localhost:8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "5000"
+	}
+	server.Run(":" + port)
 }
