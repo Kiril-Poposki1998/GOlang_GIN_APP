@@ -4,7 +4,6 @@ import (
 	"os"
 
 	"github.com/Kiril-Poposki1998/smidGIN/controller"
-	"github.com/Kiril-Poposki1998/smidGIN/middleware"
 	"github.com/Kiril-Poposki1998/smidGIN/service"
 	"github.com/gin-gonic/gin"
 )
@@ -16,8 +15,8 @@ var (
 
 func main() {
 	server := gin.New()
-	server.LoadHTMLGlob("templates/*.html")
-	server.Use(gin.Recovery(), middleware.BasicAuth())
+	server.LoadHTMLGlob("/app/templates/*.html")
+	server.Use(gin.Recovery())
 
 	apiRoutes := server.Group("/api")
 	{
