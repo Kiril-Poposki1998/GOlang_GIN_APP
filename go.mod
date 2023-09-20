@@ -1,4 +1,4 @@
-module github.com/Kiril-Poposki1998/smidGIN
+module github.com/Kiril-Poposki1998/GOlang_GIN_APP
 
 go 1.18
 

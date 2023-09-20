@@ -1,6 +1,6 @@
 package service
 
-import "github.com/Kiril-Poposki1998/smidGIN/entity"
+import "github.com/Kiril-Poposki1998/GOlang_GIN_APP/entity"
 
 type Person_Service interface {
 	Save(entity.Person) entity.Person

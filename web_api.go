@@ -3,8 +3,8 @@ package main
 import (
 	"os"
 
-	"github.com/Kiril-Poposki1998/smidGIN/controller"
-	"github.com/Kiril-Poposki1998/smidGIN/service"
+	"github.com/Kiril-Poposki1998/GOlang_GIN_APP/controller"
+	"github.com/Kiril-Poposki1998/GOlang_GIN_APP/service"
 	"github.com/gin-gonic/gin"
 )
 

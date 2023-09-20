@@ -3,8 +3,8 @@ package controller
 import (
 	"net/http"
 
-	"github.com/Kiril-Poposki1998/smidGIN/entity"
-	"github.com/Kiril-Poposki1998/smidGIN/service"
+	"github.com/Kiril-Poposki1998/GOlang_GIN_APP/entity"
+	"github.com/Kiril-Poposki1998/GOlang_GIN_APP/service"
 	"github.com/gin-gonic/gin"
 )
 
