@@ -1,4 +1,4 @@
-FROM golang:latest AS build
+FROM golang:1.18-alpine AS build
 
 LABEL maintainer="Kiril Poposki"
 ARG CGO_ENABLED=0
